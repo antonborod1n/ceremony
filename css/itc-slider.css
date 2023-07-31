@@ -16,6 +16,10 @@
   overflow: hidden;
 }
 
+.itc-slider__wrapper-about {
+  padding: 0;
+}
+
 .itc-slider__items {
   display: flex;
   transition: transform 0.5s ease;
@@ -24,6 +28,13 @@
 
 .itc-slider__transition-none {
   transition: none;
+}
+
+.itc-slider-about .itc-slider__item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  user-select: none;
+  will-change: transform;
 }
 
 .itc-slider__item {

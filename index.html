@@ -28,19 +28,19 @@
             </button>
             <ul class="menu__list">
               <li class="menu__item">
-                <a class="menu__link" href="#">церемония</a>
+                <a class="menu__link" href="#cerem">церемония</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">о мастере</a>
+                <a class="menu__link" href="#about">о мастере</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">место</a>
+                <a class="menu__link" href="#place">место</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">отзывы</a>
+                <a class="menu__link" href="#reviews">отзывы</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">контакты</a>
+                <a class="menu__link" href="#contact">контакты</a>
               </li>
             </ul>
           </nav>
@@ -58,7 +58,7 @@
             </div>
           </div>
         </section>
-        <section class="info">
+        <section class="info" id="cerem">
           <div class="container">
             <div class="info__top">
               <p class="info__text">
@@ -107,10 +107,29 @@
             </div>
           </div>
           <div class="info__bottom">
-            <img class="info__bottom-img" src="./images/image1.png" alt="Церемония Рапэ" />
+            <div
+            class="itc-slider itc-slider-about"
+            data-slider="itc-slider"
+            data-loop="true"
+            data-autoplay="true"
+          >
+            <div class="itc-slider__wrapper itc-slider__wrapper-about">
+              <div class="itc-slider__items">
+                <div class="itc-slider__item">
+                  <img class="info__bottom-img" src="./images/image1.png" alt="Церемония Рапэ" />
+                </div>
+                <div class="itc-slider__item">
+                  <img class="info__bottom-img" src="./images/image1.png" alt="Церемония Рапэ" />
+                </div>
+                <div class="itc-slider__item">
+                  <img class="info__bottom-img" src="./images/image1.png" alt="Церемония Рапэ" />
+                </div>
+              </div>
+            </div>
+            
           </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
           <div class="container">
             <h2 class="about__title">О мастере</h2>
             <div class="about__inner">
@@ -150,7 +169,7 @@
             </div>
           </div>
         </section>
-        <section class="ceremony">
+        <section class="ceremony" id="place">
           <div class="container">
             <div class="ceremony__inner">
               <h2 class="ceremony__title">
@@ -160,7 +179,26 @@
                 Не упустите возможность познать глубинные преимущества церемонии рапэ на высоте
                 птичьего полета и открыть поток изобилия в своей жизни прямо в сердце города.
               </p>
-              <img class="ceremony__img" src="./images/image3.png" alt="Церемония рапэ" />
+              <div
+                class="itc-slider itc-slider-about"
+                data-slider="itc-slider"
+                data-loop="true"
+                data-autoplay="true"
+              >
+                <div class="itc-slider__wrapper itc-slider__wrapper-about">
+                  <div class="itc-slider__items">
+                    <div class="itc-slider__item">
+                      <img class="ceremony__img" src="./images/image3.png" alt="Церемония рапэ" />
+                    </div>
+                    <div class="itc-slider__item">
+                      <img class="ceremony__img" src="./images/image3.png" alt="Церемония рапэ" />
+                    </div>
+                    <div class="itc-slider__item">
+                      <img class="ceremony__img" src="./images/image3.png" alt="Церемония рапэ" />
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="ceremony__box">
                 <div class="ceremony__item">
                   <p class="ceremony__item-text">
@@ -190,7 +228,7 @@
             </div>
           </div>
         </section>
-        <section class="application">
+        <section class="application" id="application">
           <div class="container">
             <h2 class="application__title">Оставь заявку и обрети внутреннюю силу</h2>
             <form action="#" class="form">
@@ -200,7 +238,7 @@
             </form>
           </div>
         </section>
-        <section class="reviews">
+        <section class="reviews" id="reviews">
           <div class="container">
             <h2 class="reviews__title">Отзывы о нашей церемонии рапэ</h2>
             <div class="itc-slider" data-slider="itc-slider" data-loop="true" data-autoplay="false">
@@ -401,24 +439,28 @@
             </div>
           </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
           <div class="container">
             <h2 class="contact__title">Контакты</h2>
             <div class="contact__inner">
               <div class="contact__info">
                 <ul class="contact__info-list">
                   <li class="contact__info-item">
-                    <a class="contact__info-tel" href="tel:+79025129109">+79025129109</a>
-                    <span class="contact__info-box">
-                      <img class="contact__icon" src="./images/icons/call.svg" alt="call" />
-                      <img class="contact__icon" src="./images/icons/whatsapp.svg" alt="whatsapp" />
-                    </span>
+                    <div class="contact__info-container">
+                      <a class="contact__info-tel" href="tel:+79025129109">
+                        <span>+79025129109</span>
+                        <img class="contact__icon" src="./images/icons/call.svg" alt="call" />
+                      </a>
+                      <a href="https://wa.me/79025129109">
+                        <img class="contact__icon" src="./images/icons/whatsapp.svg" alt="whatsapp" />
+                      </a>
+                    </div>
                   </li>
                   <li class="contact__info-item">
-                    <a class="contact__info-telegram" href="https://t.me/AlexRoss38">@alexross38</a>
-                    <span class="contact__info-box contact__info-box-telegram">
+                    <a class="contact__info-telegram" href="https://t.me/AlexRoss38">
+                      <span>@alexross38</span>
                       <img class="contact__icon" src="./images/icons/telegram.svg" alt="telegram" />
-                    </span>
+                    </a>
                   </li>
                 </ul>
                 <form class="contact__form" action="#">
@@ -485,6 +527,9 @@
           </div>
         </div>
       </footer>
+      <div class="order">
+        <a href="#application" class="order__link">Оставить <br class="br-m">заявку</a>
+      </div>
     </div>
     <script src="./js/itc-slider.js" defer></script>
     <script src="./js/script.js"></script>

@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   height: 100%;
@@ -263,6 +267,7 @@ body {
   object-fit: cover;
   margin: 0 auto;
   margin-bottom: 130px;
+  border-radius: 40px;
 }
 .ceremony__img-bottom {
   width: 619px;
@@ -438,7 +443,14 @@ body {
   flex-direction: column;
   gap: 24px;
 }
+.contact__info-container {
+  display: flex;
+  gap: 20px;
+}
 .contact__info-tel {
+  display: flex;
+  gap: 20px;
+  align-items: center;
   color: #000;
   font-family: 'Nunito Sans', sans-serif;
   font-size: 32px;
@@ -447,17 +459,11 @@ body {
 .contact__info-item {
   position: relative;
 }
-.contact__info-box {
-  display: flex;
-  position: absolute;
-  left: 250px;
-  top: -15px;
-}
-.contact__info-box-telegram {
-  left: 254px;
-  top: -10px;
-}
+
 .contact__info-telegram {
+  display: flex;
+  align-items: center;
+  gap: 60px;
   color: #000;
   font-family: 'Nunito Sans', sans-serif;
   font-size: 32px;
@@ -583,6 +589,39 @@ body {
 }
 .footer__copy {
   font-size: 16px;
+}
+
+.br-m {
+  display: none;
+}
+
+.order {
+  position: fixed;
+  padding: 15px 0px;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: animate_gradient 5s ease infinite;
+}
+
+.order__link {
+  font-size: 16px;
+  color: #000000;
+  padding: 15px;
+}
+
+@keyframes animate_gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @media (max-width: 1440px) {
@@ -784,6 +823,9 @@ body {
   .contact__info-telegram {
     font-size: 28px;
   }
+  .contact__info-telegram {
+    gap: 50px;
+  }
   .contact__icon {
     width: 50px;
     height: 50px;
@@ -847,6 +889,24 @@ body {
 }
 
 @media (max-width: 992px) {
+  .order {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0px;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .br-m {
+    display: block;
+  }
+
+  .order__link {
+    font-size: 13px;
+  }
+
   .header {
     padding: 17px 0;
   }
@@ -1045,10 +1105,6 @@ body {
   .contact__icon {
     width: 40px;
     height: 40px;
-  }
-  .contact__info-box,
-  .contact__info-box-telegram {
-    top: -5px;
   }
   .contact {
     padding-bottom: 140px;
@@ -1318,11 +1374,6 @@ body {
   .contact__info-telegram {
     font-size: 16px;
   }
-  .contact__info-box,
-  .contact__info-box-telegram {
-    top: -5px;
-    left: 200px;
-  }
   .contact__form {
     margin-top: 35px;
     padding: 30px 15px;
@@ -1351,6 +1402,9 @@ body {
   .contact__address {
     font-size: 13px;
   }
+  .contact__info-telegram {
+    gap: 38px;
+  }
   .footer__inner {
     padding: 0 15px;
   }
@@ -1361,6 +1415,7 @@ body {
   .footer__contact {
     justify-content: flex-start;
   }
+
   .footer-menu {
     gap: 30px;
   }
